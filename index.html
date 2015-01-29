@@ -33,6 +33,17 @@
    
     <script src="http://www.google-analytics.com/analytics.js" async></script>
     <script async src="js/perfmatters.js"></script>
+    <script>
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = 'css/style.css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
   </head>
 
   <body>
@@ -73,17 +84,7 @@
           </li>
         </ul>
     </div>
-      <script>
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'css/style.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
-    </script>
+      
     <footer>
       <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
     </footer>
