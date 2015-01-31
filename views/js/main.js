@@ -1,12 +1,16 @@
 /*
 Welcome to the 60fps project! Your goal is to make Cam's Pizzeria website run
 jank-free at 60 frames per second.
+
 There are two major issues in this code that lead to sub-60fps performance. Can
 you spot and fix both?
+
+
 Built into the code, you'll find a few instances of the User Timing API
 (window.performance), which will be console.log()ing frame rate data into the
 browser console. To learn more about User Timing API, check out:
 http://www.html5rocks.com/en/tutorials/webperformance/usertiming/
+
 Creator:
 Cameron Pittman, Udacity Course Developer
 cameron *at* udacity *dot* com
@@ -16,24 +20,113 @@ cameron *at* udacity *dot* com
 // Here are arrays of all possible pizza ingredients.
 var pizzaIngredients = {};
 pizzaIngredients.meats = [
-  "Pepperoni",  "Sausage",  "Fennel Sausage",  "Spicy Sausage",  "Chicken",  "BBQ Chicken",  "Chorizo",  "Chicken Andouille",
-  "Salami",  "Tofu",  "Bacon",  "Canadian Bacon",  "Proscuitto",  "Italian Sausage",  "Ground Beef",  "Anchovies",
-  "Turkey",  "Ham",  "Venison",  "Lamb",  "Duck",  "Soylent Green",  "Carne Asada",  "Soppressata Picante",  "Coppa",
-  "Pancetta",  "Bresola",  "Lox",  "Guanciale",  "Chili",  "Beef Jerky",  "Pastrami",  "Kielbasa",  "Scallops",  "Filet Mignon"
+  "Pepperoni",
+  "Sausage",
+  "Fennel Sausage",
+  "Spicy Sausage",
+  "Chicken",
+  "BBQ Chicken",
+  "Chorizo",
+  "Chicken Andouille",
+  "Salami",
+  "Tofu",
+  "Bacon",
+  "Canadian Bacon",
+  "Proscuitto",
+  "Italian Sausage",
+  "Ground Beef",
+  "Anchovies",
+  "Turkey",
+  "Ham",
+  "Venison",
+  "Lamb",
+  "Duck",
+  "Soylent Green",
+  "Carne Asada",
+  "Soppressata Picante",
+  "Coppa",
+  "Pancetta",
+  "Bresola",
+  "Lox",
+  "Guanciale",
+  "Chili",
+  "Beef Jerky",
+  "Pastrami",
+  "Kielbasa",
+  "Scallops",
+  "Filet Mignon"
 ];
 pizzaIngredients.nonMeats = [
-  "White Onions",  "Red Onions",  "Sauteed Onions",  "Green Peppers",  "Red Peppers",  "Banana Peppers",  "Ghost Peppers",
-  "Habanero Peppers",  "Jalapeno Peppers",  "Stuffed Peppers",  "Spinach",  "Tomatoes",  "Pineapple",  "Pear Slices",
-  "Apple Slices",  "Mushrooms",  "Arugula",  "Basil",  "Fennel",  "Rosemary",  "Cilantro",  "Avocado",  "Guacamole",
-  "Salsa",  "Swiss Chard",  "Kale",  "Sun Dried Tomatoes",  "Walnuts",  "Artichoke",  "Asparagus",  "Caramelized Onions",
-  "Mango",  "Garlic",  "Olives",  "Cauliflower",  "Polenta",  "Fried Egg",  "Zucchini",  "Hummus"
+  "White Onions",
+  "Red Onions",
+  "Sauteed Onions",
+  "Green Peppers",
+  "Red Peppers",
+  "Banana Peppers",
+  "Ghost Peppers",
+  "Habanero Peppers",
+  "Jalapeno Peppers",
+  "Stuffed Peppers",
+  "Spinach",
+  "Tomatoes",
+  "Pineapple",
+  "Pear Slices",
+  "Apple Slices",
+  "Mushrooms",
+  "Arugula",
+  "Basil",
+  "Fennel",
+  "Rosemary",
+  "Cilantro",
+  "Avocado",
+  "Guacamole",
+  "Salsa",
+  "Swiss Chard",
+  "Kale",
+  "Sun Dried Tomatoes",
+  "Walnuts",
+  "Artichoke",
+  "Asparagus",
+  "Caramelized Onions",
+  "Mango",
+  "Garlic",
+  "Olives",
+  "Cauliflower",
+  "Polenta",
+  "Fried Egg",
+  "Zucchini",
+  "Hummus"
 ];
 pizzaIngredients.cheeses = [
-  "American Cheese",  "Swiss Cheese",  "Goat Cheese",  "Mozzarella Cheese",  "Parmesean Cheese",  "Velveeta Cheese",
-  "Gouda Cheese",  "Muenster Cheese",  "Applewood Cheese",  "Asiago Cheese",  "Bleu Cheese",  "Boursin Cheese",  "Brie Cheese",
-  "Cheddar Cheese",  "Chevre Cheese",  "Havarti Cheese",  "Jack Cheese",  "Pepper Jack Cheese",  "Gruyere Cheese",
-  "Limberger Cheese",  "Manchego Cheese",  "Marscapone Cheese",  "Pecorino Cheese",  "Provolone Cheese",  "Queso Cheese",
-  "Roquefort Cheese",  "Romano Cheese",  "Ricotta Cheese",  "Smoked Gouda"
+  "American Cheese",
+  "Swiss Cheese",
+  "Goat Cheese",
+  "Mozzarella Cheese",
+  "Parmesean Cheese",
+  "Velveeta Cheese",
+  "Gouda Cheese",
+  "Muenster Cheese",
+  "Applewood Cheese",
+  "Asiago Cheese",
+  "Bleu Cheese",
+  "Boursin Cheese",
+  "Brie Cheese",
+  "Cheddar Cheese",
+  "Chevre Cheese",
+  "Havarti Cheese",
+  "Jack Cheese",
+  "Pepper Jack Cheese",
+  "Gruyere Cheese",
+  "Limberger Cheese",
+  "Manchego Cheese",
+  "Marscapone Cheese",
+  "Pecorino Cheese",
+  "Provolone Cheese",
+  "Queso Cheese",
+  "Roquefort Cheese",
+  "Romano Cheese",
+  "Ricotta Cheese",
+  "Smoked Gouda"
 ];
 pizzaIngredients.sauces = [
   "Red Sauce",
@@ -304,6 +397,7 @@ var pizzaElementGenerator = function(i) {
 
   return pizzaContainer;
 }
+
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
 var resizePizzas = function(size) { 
   window.performance.mark("mark_start_resize");   // User Timing API function
@@ -403,6 +497,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
+// Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
@@ -422,8 +517,23 @@ function updatePositions() {
     logAverageFrame(timesToUpdatePosition);
   }
 }
-// Moves the sliding background pizzas based on scroll position
 
 // runs updatePositions on scroll
+window.addEventListener('scroll', updatePositions);
 
-
+// Generates the sliding pizzas when the page loads.
+document.addEventListener('DOMContentLoaded', function() {
+  var cols = 8;
+  var s = 256;
+  for (var i = 0; i < 200; i++) {
+    var elem = document.createElement('img');
+    elem.className = 'mover';
+    elem.src = "images/pizza.png";
+    elem.style.height = "100px";
+    elem.style.width = "73.333px";
+    elem.basicLeft = (i % cols) * s;
+    elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    document.querySelector("#movingPizzas1").appendChild(elem);
+  }
+  updatePositions();
+});
