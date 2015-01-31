@@ -29,35 +29,11 @@ pizzaIngredients.nonMeats = [
   "Mango",  "Garlic",  "Olives",  "Cauliflower",  "Polenta",  "Fried Egg",  "Zucchini",  "Hummus"
 ];
 pizzaIngredients.cheeses = [
-  "American Cheese",
-  "Swiss Cheese",
-  "Goat Cheese",
-  "Mozzarella Cheese",
-  "Parmesean Cheese",
-  "Velveeta Cheese",
-  "Gouda Cheese",
-  "Muenster Cheese",
-  "Applewood Cheese",
-  "Asiago Cheese",
-  "Bleu Cheese",
-  "Boursin Cheese",
-  "Brie Cheese",
-  "Cheddar Cheese",
-  "Chevre Cheese",
-  "Havarti Cheese",
-  "Jack Cheese",
-  "Pepper Jack Cheese",
-  "Gruyere Cheese",
-  "Limberger Cheese",
-  "Manchego Cheese",
-  "Marscapone Cheese",
-  "Pecorino Cheese",
-  "Provolone Cheese",
-  "Queso Cheese",
-  "Roquefort Cheese",
-  "Romano Cheese",
-  "Ricotta Cheese",
-  "Smoked Gouda"
+  "American Cheese",  "Swiss Cheese",  "Goat Cheese",  "Mozzarella Cheese",  "Parmesean Cheese",  "Velveeta Cheese",
+  "Gouda Cheese",  "Muenster Cheese",  "Applewood Cheese",  "Asiago Cheese",  "Bleu Cheese",  "Boursin Cheese",  "Brie Cheese",
+  "Cheddar Cheese",  "Chevre Cheese",  "Havarti Cheese",  "Jack Cheese",  "Pepper Jack Cheese",  "Gruyere Cheese",
+  "Limberger Cheese",  "Manchego Cheese",  "Marscapone Cheese",  "Pecorino Cheese",  "Provolone Cheese",  "Queso Cheese",
+  "Roquefort Cheese",  "Romano Cheese",  "Ricotta Cheese",  "Smoked Gouda"
 ];
 pizzaIngredients.sauces = [
   "Red Sauce",
