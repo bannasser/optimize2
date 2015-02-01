@@ -495,4 +495,4 @@ console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
   
-}
+
