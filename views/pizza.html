@@ -3,15 +3,7 @@
 <head>  
 
 <script>
-  function logAverageFrame(times) {   // times is the array of User Timing measurements from updatePositions()
-  var numberOfEntries = times.length;
-  var sum = 0;
-  for (var i = numberOfEntries - 1; i > numberOfEntries - 11; i--) {
-    sum = sum + times[i].duration;
-  }
-  console.log("Average time to generate last 10 frames: " + sum / 10 + "ms");
-}
- var frame = 0;
+  
   // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);
 
@@ -31,6 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   updatePositions();
 });
+function logAverageFrame(times) {   // times is the array of User Timing measurements from updatePositions()
+  var numberOfEntries = times.length;
+  var sum = 0;
+  for (var i = numberOfEntries - 1; i > numberOfEntries - 11; i--) {
+    sum = sum + times[i].duration;
+  }
+  console.log("Average time to generate last 10 frames: " + sum / 10 + "ms");
+}
+ var frame = 0;
 </script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
