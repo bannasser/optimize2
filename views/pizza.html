@@ -5,16 +5,7 @@
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   
   <script>
-    function updatePositions() {
-  frame++;
-  window.performance.mark("mark_start_frame");
-
-  var items = document.querySelectorAll('.mover');
-  for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-  }
-    }
+    
     
   window.addEventListener('scroll', updatePositions);
 
@@ -40,7 +31,16 @@ window.performance.mark("mark_end_frame");
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
   }
+function updatePositions() {
+  frame++;
+  window.performance.mark("mark_start_frame");
 
+  var items = document.querySelectorAll('.mover');
+  for (var i = 0; i < items.length; i++) {
+    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+  }
+    }
 </script>
 </head>
 
