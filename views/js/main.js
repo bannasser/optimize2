@@ -505,8 +505,11 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = i
+    tems[i].basicLeft + 100 * phase + 'px';
+  }
 
-}
+
+
 
 
 
