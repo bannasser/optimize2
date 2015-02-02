@@ -506,7 +506,7 @@ function updatePositions() {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = i
 
-
+}
 
 
 
