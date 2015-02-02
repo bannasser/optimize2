@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   
   <script>
+  
+      window.addEventListener('scroll', updatePositions);
+
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
@@ -18,7 +21,6 @@ function updatePositions() {
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 }
-    window.addEventListener('scroll', updatePositions);
 
   </script>
 </head>
