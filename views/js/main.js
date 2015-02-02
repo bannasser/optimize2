@@ -507,7 +507,7 @@ function updatePositions() {
     items[i].style.left = i
     tems[i].basicLeft + 100 * phase + 'px';
   }
-
+}
 
 
 
