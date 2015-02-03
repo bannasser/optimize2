@@ -517,4 +517,5 @@ function updatePositions() {
     logAverageFrame(timesToUpdatePosition);
   }
 }
+window.addEventListener('scroll', updatePositions);
 
