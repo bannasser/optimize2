@@ -2,6 +2,7 @@
 <html>
 <head> 
 <script>
+window.addEventListener('scroll', updatePositions);
 
   // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   updatePositions();
 });
-window.addEventListener('scroll', updatePositions);
 
 </script>
   <link rel="stylesheet" href="css/style.css">
