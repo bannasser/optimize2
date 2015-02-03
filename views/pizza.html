@@ -3,7 +3,11 @@
 <head>  
 <script>
     
-
+var items = document.querySelectorAll('.mover');
+  for (var i = 0; i < items.length; i++) {
+    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+  }
 // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
