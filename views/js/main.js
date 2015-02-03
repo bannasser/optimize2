@@ -504,7 +504,7 @@ var items = document.querySelectorAll('.mover');
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
- }
+ 
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
   
@@ -518,7 +518,7 @@ var items = document.querySelectorAll('.mover');
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
   }
-
+}
 window.addEventListener('scroll', updatePositions);
 
 
