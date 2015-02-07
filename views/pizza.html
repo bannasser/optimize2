@@ -2,7 +2,6 @@
 <html>
 <head>  
 <script>
-  window.addEventListener('scroll', updatePositions);
   function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
@@ -22,6 +21,8 @@
     logAverageFrame(timesToUpdatePosition);
   }
 }
+  window.addEventListener('scroll', updatePositions);
+
 </script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
