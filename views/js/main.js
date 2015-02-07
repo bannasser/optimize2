@@ -522,7 +522,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   for (var i = 0; i < 200; i++) {
@@ -537,3 +537,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   updatePositions();
 });
+*/
