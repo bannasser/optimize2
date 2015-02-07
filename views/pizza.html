@@ -3,7 +3,6 @@
 <head> 
 <script>
 
-window.addEventListener('scroll', updatePositions);
   function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
@@ -23,6 +22,7 @@ window.addEventListener('scroll', updatePositions);
     logAverageFrame(timesToUpdatePosition);
   }
 }
+window.addEventListener('scroll', updatePositions);
 
 </script>
 
