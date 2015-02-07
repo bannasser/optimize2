@@ -140,7 +140,6 @@
     <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
   </div>
   <script>
-window.addEventListener('scroll', updatePositions);
 
 function updatePositions() {
   frame++;
@@ -161,6 +160,7 @@ function updatePositions() {
     logAverageFrame(timesToUpdatePosition);
   }
 }
+window.addEventListener('scroll', updatePositions);
 
 </script>
 
