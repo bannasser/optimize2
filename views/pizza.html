@@ -1,11 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head> 
-<script>
 
 // Logs the average amount of time per 10 frames needed to move the sliding background pizzas on scroll.
 
-window.addEventListener('scroll', updatePositions);
 
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
@@ -15,7 +13,6 @@ window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 
-</script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   
@@ -155,6 +152,10 @@ window.addEventListener('scroll', updatePositions);
   </div>
   
   <script type="text/javascript" src="js/main.js"></script>
+  <script>
+    window.addEventListener('scroll', updatePositions);
+
+  </script>
 </body>
 
 </html>
