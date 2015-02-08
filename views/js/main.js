@@ -460,14 +460,14 @@ var resizePizzas = function(size) {
   changePizzaSizes(size);
 
   // User Timing API is awesome
-  window.performance.mark("mark_end_resize");
+ /* window.performance.mark("mark_end_resize");
   window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
   var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
   console.log("Time to resize pizzas: " + timeToResize[0].duration + "ms");
 }
 
 window.performance.mark("mark_start_generating"); // collect timing data
-
+*/
 // This for-loop actually creates and appends all of the pizzas when the page loads
 for (var i = 2; i < 100; i++) {
   var pizzasDiv = document.getElementById("randomPizzas");
@@ -475,10 +475,10 @@ for (var i = 2; i < 100; i++) {
 }
 
 // User Timing API again. These measurements tell you how long it took to generate the initial pizzas
-window.performance.mark("mark_end_generating");
-window.performance.measure("measure_pizza_generation", "mark_start_generating", "mark_end_generating");
-var timeToGenerate = window.performance.getEntriesByName("measure_pizza_generation");
-console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "ms");
+//window.performance.mark("mark_end_generating");
+//window.performance.measure("measure_pizza_generation", "mark_start_generating", "mark_end_generating");
+//var timeToGenerate = window.performance.getEntriesByName("measure_pizza_generation");
+//console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "ms");
 
 // Iterator for number of times the pizzas in the background have scrolled.
 // Used by updatePositions() to decide when to log the average time per frame
