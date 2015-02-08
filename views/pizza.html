@@ -31,7 +31,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 }
 */
 
- /*function updatePositions() {
+ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
@@ -49,7 +49,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
   }
-}*/
+}
 window.addEventListener('scroll', updatePositions);
 
 document.addEventListener('DOMContentLoaded', function() {
