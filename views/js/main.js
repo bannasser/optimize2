@@ -539,6 +539,7 @@ function updatePositions() {
   console.log(phaseOptions);
   for (var i = 0; i < items.length; i++) {
   j=i % 5;   
+  var phase;
 
     switch (j){
     case "0":
