@@ -518,8 +518,8 @@ function updatePositions() {
 
   var items = document.querySelectorAll('.mover');
   var phaseOptions=new Array();
-  for (var k=0 ; k<5 ;k++){
-   phaseOptions[k]=Math.sin((document.body.scrollTop/1250) +k);
+  for (var z=0 ; z<5 ;z++){
+   phaseOptions[z]=Math.sin((document.body.scrollTop/1250) +z);
   }
   for (var i = 0; i < items.length; i++) {
   j=i % 5;
