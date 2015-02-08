@@ -31,7 +31,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 }
 */
 
- function updatePositions() {
+ /*function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
@@ -49,10 +49,10 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
   }
-}
+}*/
 window.addEventListener('scroll', updatePositions);
 
-/*document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   for (var i = 0; i < 200; i++) {
@@ -66,7 +66,7 @@ window.addEventListener('scroll', updatePositions);
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
   updatePositions();
-});*/
+});
 </script>
 
 
