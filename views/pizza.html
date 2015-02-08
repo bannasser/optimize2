@@ -2,6 +2,8 @@
 <html>
 <head> 
 <script>
+window.addEventListener('scroll', updatePositions);
+
 /*window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
@@ -50,7 +52,6 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
     logAverageFrame(timesToUpdatePosition);
   }
 }
-window.addEventListener('scroll', updatePositions);
 
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
