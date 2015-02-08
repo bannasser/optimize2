@@ -535,7 +535,6 @@ function updatePositions() {
   for (var z=0 ; z<5 ;z++){
    phaseOptions[z]=Math.sin((document.body.scrollTop/1250) +z);
   }
-  var phase=0;
   for (var i = 0; i < items.length; i++) {
   j=i % 5;
     switch (j){
@@ -555,10 +554,10 @@ function updatePositions() {
         phase=phaseOptions[4];
     break;
   } 
+  items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
 
 
   }
-  items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
 
   }
 
