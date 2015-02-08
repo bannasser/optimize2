@@ -523,6 +523,7 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
   j=i % 5;
   function Jselector (j){
+    switch (j){
     case "0":
       phase=phaseOptions[0];
     case "1":
@@ -534,7 +535,7 @@ function updatePositions() {
     case "4":
       phase=phaseOptions[4];
   }
-    
+  }  
   }
 
     items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
