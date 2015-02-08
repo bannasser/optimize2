@@ -522,6 +522,7 @@ function updatePositions() {
 
   }
        var phase = Math.sin((document.body.scrollTop / 1250) + 1);
+       var phase = Math.sin((document.body.scrollTop / 1250) + 2);
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
