@@ -523,15 +523,15 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
   j=i % 5;
   function Jselector (j){
-    case 0:
+    case "0":
       phase=phaseOptions[0];
-    case 1:
+    case "1":
      phase=phaseOptions[1];
-    case 2:
+    case "2":
       phase=phaseOptions[2];
-    casae 3:
+    case "3":
      phase=phaseOptions[3];
-    case 4:
+    case "4":
       phase=phaseOptions[4];
   }
     
