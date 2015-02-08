@@ -537,9 +537,9 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 }
 
 // runs updatePositions on scroll
-window.addEventListener('scroll', updatePositions);
+window.addEventListener('scroll', updatePositions);*/
 
-// Generates the sliding pizzas when the page loads.
+//Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
@@ -554,5 +554,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
   updatePositions();
-});*/
+});
 
