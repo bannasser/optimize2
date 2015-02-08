@@ -534,7 +534,7 @@ function updatePositions() {
      var phase=phaseOptions[3];
     case "4":
        var phase=phaseOptions[4];
-    
+    break;
   }
       items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
 
