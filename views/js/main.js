@@ -531,7 +531,6 @@ function updatePositions() {
   window.performance.mark("mark_start_frame*/
 
   var items = document.querySelectorAll('.mover');
-    var phase=0;
     var phaseOptions=new Array();
   for (var z=0 ; z<5 ;z++){
    phaseOptions[z]=Math.sin((document.body.scrollTop/1250) +z);
@@ -539,7 +538,9 @@ function updatePositions() {
   }
   console.log(phaseOptions);
   for (var i = 0; i < items.length; i++) {
-  j=i % 5;
+  j=i % 5;   
+  var phase=0;
+
     switch (j){
     case "0":
         phase=phaseOptions[0];
