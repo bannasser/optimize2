@@ -543,7 +543,7 @@ function updatePositions() {
   }
 
 
-  }
+  
        
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
