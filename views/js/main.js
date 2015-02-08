@@ -535,10 +535,12 @@ function updatePositions() {
      phase=phaseOptions[3];
     case "4":
       phase=phaseOptions[4];
+      
+      items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
+
   }
 
   } 
-  items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
 
   }
 
