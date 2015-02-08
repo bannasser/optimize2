@@ -525,15 +525,15 @@ function updatePositions() {
   j=i % 5;
     switch (j){
     case "0":
-      phase=phaseOptions[0];
+       var phase=phaseOptions[0];
     case "1":
-     phase=phaseOptions[1];
+    var  phase=phaseOptions[1];
     case "2":
-      phase=phaseOptions[2];
+      var phase=phaseOptions[2];
     case "3":
-     phase=phaseOptions[3];
+     var phase=phaseOptions[3];
     case "4":
-      phase=phaseOptions[4];
+       var phase=phaseOptions[4];
     
   }
       items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
