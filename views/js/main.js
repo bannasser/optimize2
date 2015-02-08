@@ -517,9 +517,25 @@ function updatePositions() {
   window.performance.mark("mark_start_frame*/
 
   var items = document.querySelectorAll('.mover');
-  phase1=document.body.scrollTop;
+  for (var k=0 ; k<5 ;k++){
+  phaseOptions[k]=Math.sin((document.body.scrollTop/1250) +k);
+  }
   for (var i = 0; i < items.length; i++) {
-  var phase = Math.sin((phase1 / 1250) + (i%5));
+  j=i % 5;
+  function Jselector (j){
+    case 0:
+      phase=phaseOptions[0];
+    case 1:
+     phase=phaseOptions[1];
+    case 2:
+      phase=phaseOptions[2];
+    casae 3:
+     phase=phaseOptions[3];
+    case 4:
+      phase=phaseOptions[4];
+  }
+    
+  }
 
     items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
 
