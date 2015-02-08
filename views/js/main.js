@@ -534,12 +534,11 @@ function updatePositions() {
     var phaseOptions=new Array();
   for (var z=0 ; z<5 ;z++){
    phaseOptions[z]=Math.sin((document.body.scrollTop/1250) +z);
-   
+   var phase=phaseOptions[z];
   }
   console.log(phaseOptions);
   for (var i = 0; i < items.length; i++) {
   j=i % 5;   
-  var phase;
 
     switch (j){
     case "0":
