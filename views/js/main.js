@@ -547,13 +547,13 @@ function updatePositions() {
      var  phase=phaseOptions[1];
     break;
     case "2":
-       phase=phaseOptions[2];
+      var  phase=phaseOptions[2];
       break;
     case "3":
-      phase=phaseOptions[3];
+     var phase=phaseOptions[3];
      break;
     case "4":
-        phase=phaseOptions[4];
+      var phase=phaseOptions[4];
     break;
   } 
   items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
