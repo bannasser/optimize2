@@ -537,7 +537,7 @@ function updatePositions() {
   }  
 
   for (var i = 0; i < items.length; i++) {
-
+var phase=0;
   j=i % 5;   
 
     switch (j){
