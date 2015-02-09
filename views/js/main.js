@@ -535,7 +535,6 @@ function updatePositions() {
   for (var z=0 ; z<5 ;z++){
    phaseOptions[z]=Math.sin((document.body.scrollTop/1250) +z);
   }  
-  var phase=0;
 
   for (var i = 0; i < items.length; i++) {
 
