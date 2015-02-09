@@ -537,15 +537,14 @@ function updatePositions() {
   }  
 
   for (var i = 0; i < items.length; i++) {
-var phase=0;
   j=i % 5;   
 
     switch (j){
     case "0":
-        phase=phaseOptions[0];
+         var phase=phaseOptions[0];
        break;
     case "1":
-     phase=phaseOptions[1];
+     var  phase=phaseOptions[1];
     break;
     case "2":
        phase=phaseOptions[2];
