@@ -562,7 +562,7 @@ function updatePositions() {
 
 
   }
-console.log phase;
+console.log (phase);
   }
 
 
