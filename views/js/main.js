@@ -526,11 +526,11 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
   }*/
-  var phase=0;
 
 function updatePositions() {
   /*frame++;
   window.performance.mark("mark_start_frame*/
+  var phase=0;
 
   var items = document.querySelectorAll('.mover');
     var phaseOptions=new Array();
