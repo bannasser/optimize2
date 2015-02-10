@@ -411,25 +411,44 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
 // Moves the sliding background pizzas based on scroll position
+
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+    var phaseOptions=new Array();
+  for (var z=0 ; z<5 ;z++){
+   phaseOptions[z]=Math.sin((document.body.scrollTop/1250) +z);
+  }  
+
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+  j=i % 5;   
+
+    switch (j){
+    case "0":
+          phase=phaseOptions[0];
+       break;
+    case "1":
+      phase=phaseOptions[1];
+    break;
+    case "2":
+        phase=phaseOptions[2];
+      break;
+    case "3":
+      phase=phaseOptions[3];
+     break;
+    case "4":
+       phase=phaseOptions[4];
+    break;
+    items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
+
+}
   }
 
-  // User Timing API to the rescue again. Seriously, it's worth learning.
-  // Super easy to create custom metrics.
-  window.performance.mark("mark_end_frame");
-  window.performance.measure("measure_frame_duration", "mark_start_frame", "mark_end_frame");
-  if (frame % 10 === 0) {
-    var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
-    logAverageFrame(timesToUpdatePosition);
+console.log (phase);
   }
-}
+
 
 // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);
