@@ -417,6 +417,8 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+      items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
+
     var phaseOptions=new Array();
   for (var z=0 ; z<5 ;z++){
    phaseOptions[z]=Math.sin((document.body.scrollTop/1250) +z);
@@ -441,7 +443,6 @@ function updatePositions() {
     case "4":
        phase=phaseOptions[4];
     break;
-    items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
 
 }
   }
