@@ -18,116 +18,29 @@ cameron *at* udacity *dot* com
 
 // As you may have realized, this website randomly generates pizzas.
 // Here are arrays of all possible pizza ingredients.
+
+
+//  Put the data in the array in line to eliminate empty space and reduce file size
+
 var pizzaIngredients = {};
 pizzaIngredients.meats = [
-  "Pepperoni",
-  "Sausage",
-  "Fennel Sausage",
-  "Spicy Sausage",
-  "Chicken",
-  "BBQ Chicken",
-  "Chorizo",
-  "Chicken Andouille",
-  "Salami",
-  "Tofu",
-  "Bacon",
-  "Canadian Bacon",
-  "Proscuitto",
-  "Italian Sausage",
-  "Ground Beef",
-  "Anchovies",
-  "Turkey",
-  "Ham",
-  "Venison",
-  "Lamb",
-  "Duck",
-  "Soylent Green",
-  "Carne Asada",
-  "Soppressata Picante",
-  "Coppa",
-  "Pancetta",
-  "Bresola",
-  "Lox",
-  "Guanciale",
-  "Chili",
-  "Beef Jerky",
-  "Pastrami",
-  "Kielbasa",
-  "Scallops",
-  "Filet Mignon"
+  "Pepperoni",  "Sausage",  "Fennel Sausage",  "Spicy Sausage",  "Chicken",  "BBQ Chicken",  "Chorizo",  "Chicken Andouille",
+  "Salami",  "Tofu",  "Bacon",  "Canadian Bacon",  "Proscuitto",  "Italian Sausage",  "Ground Beef",  "Anchovies",
+  "Turkey",  "Ham",  "Venison",  "Lamb",  "Duck",  "Soylent Green",  "Carne Asada",  "Soppressata Picante",  "Coppa",
+  "Pancetta",  "Bresola",  "Lox",  "Guanciale",  "Chili",  "Beef Jerky",  "Pastrami",  "Kielbasa",  "Scallops",  "Filet Mignon"
 ];
 pizzaIngredients.nonMeats = [
-  "White Onions",
-  "Red Onions",
-  "Sauteed Onions",
-  "Green Peppers",
-  "Red Peppers",
-  "Banana Peppers",
-  "Ghost Peppers",
-  "Habanero Peppers",
-  "Jalapeno Peppers",
-  "Stuffed Peppers",
-  "Spinach",
-  "Tomatoes",
-  "Pineapple",
-  "Pear Slices",
-  "Apple Slices",
-  "Mushrooms",
-  "Arugula",
-  "Basil",
-  "Fennel",
-  "Rosemary",
-  "Cilantro",
-  "Avocado",
-  "Guacamole",
-  "Salsa",
-  "Swiss Chard",
-  "Kale",
-  "Sun Dried Tomatoes",
-  "Walnuts",
-  "Artichoke",
-  "Asparagus",
-  "Caramelized Onions",
-  "Mango",
-  "Garlic",
-  "Olives",
-  "Cauliflower",
-  "Polenta",
-  "Fried Egg",
-  "Zucchini",
-  "Hummus"
-];
+  "White Onions",  "Red Onions",  "Sauteed Onions",  "Green Peppers",  "Red Peppers",  "Banana Peppers",  "Ghost Peppers",
+  "Habanero Peppers",  "Jalapeno Peppers",  "Stuffed Peppers",  "Spinach",  "Tomatoes",  "Pineapple",  "Pear Slices",
+  "Apple Slices",  "Mushrooms",  "Arugula",  "Basil",  "Fennel",  "Rosemary",  "Cilantro",  "Avocado",  "Guacamole",
+  "Salsa",  "Swiss Chard",  "Kale",  "Sun Dried Tomatoes",  "Walnuts",  "Artichoke",  "Asparagus",  "Caramelized Onions",
+  "Mango",  "Garlic",  "Olives",  "Cauliflower",  "Polenta",  "Fried Egg",  "Zucchini",  "Hummus"];
 pizzaIngredients.cheeses = [
-  "American Cheese",
-  "Swiss Cheese",
-  "Goat Cheese",
-  "Mozzarella Cheese",
-  "Parmesean Cheese",
-  "Velveeta Cheese",
-  "Gouda Cheese",
-  "Muenster Cheese",
-  "Applewood Cheese",
-  "Asiago Cheese",
-  "Bleu Cheese",
-  "Boursin Cheese",
-  "Brie Cheese",
-  "Cheddar Cheese",
-  "Chevre Cheese",
-  "Havarti Cheese",
-  "Jack Cheese",
-  "Pepper Jack Cheese",
-  "Gruyere Cheese",
-  "Limberger Cheese",
-  "Manchego Cheese",
-  "Marscapone Cheese",
-  "Pecorino Cheese",
-  "Provolone Cheese",
-  "Queso Cheese",
-  "Roquefort Cheese",
-  "Romano Cheese",
-  "Ricotta Cheese",
-  "Smoked Gouda"
-];
+  "American Cheese",  "Swiss Cheese",  "Goat Cheese",  "Mozzarella Cheese",  "Parmesean Cheese",  "Velveeta Cheese",
+  "Gouda Cheese",  "Muenster Cheese",  "Applewood Cheese",  "Asiago Cheese",  "Bleu Cheese",  "Boursin Cheese",
+  "Brie Cheese",  "Cheddar Cheese",  "Chevre Cheese",  "Havarti Cheese",  "Jack Cheese",  "Pepper Jack Cheese",
+  "Gruyere Cheese",  "Limberger Cheese",  "Manchego Cheese",  "Marscapone Cheese",  "Pecorino Cheese",  "Provolone Cheese",
+  "Queso Cheese",  "Roquefort Cheese",  "Romano Cheese",  "Ricotta Cheese",  "Smoked Gouda"];
 pizzaIngredients.sauces = [
   "Red Sauce",
   "Marinara",
@@ -493,21 +406,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
   }
   console.log("Average time to generate last 10 frames: " + sum / 10 + "ms");
 }
-/*document.addEventListener('DOMContentLoaded', function() {
-  var cols = 8;
-  var s = 256;
-  for (var i = 0; i < 200; i++) {
-    var elem = document.createElement('img');
-    elem.className = 'mover';
-    elem.src = "images/pizza.png";
-    elem.style.height = "100px";
-    elem.style.width = "73.333px";
-    elem.basicLeft = (i % cols) * s;
-    elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
-  }
-  updatePositions();
-});*/
+
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
@@ -520,50 +419,14 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
-  /*window.performance.mark("mark_end_frame");
+  window.performance.mark("mark_end_frame");
   window.performance.measure("measure_frame_duration", "mark_start_frame", "mark_end_frame");
   if (frame % 10 === 0) {
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
-  }*/
+  }
     var phase=0;
 
-function updatePositions() {
-  /*frame++;
-  window.performance.mark("mark_start_frame*/
-
-  var items = document.querySelectorAll('.mover');
-    var phaseOptions=new Array();
-  for (var z=0 ; z<5 ;z++){
-   phaseOptions[z]=Math.sin((document.body.scrollTop/1250) +z);
-  }  
-
-  for (var i = 0; i < items.length; i++) {
-  j=i % 5;   
-
-    switch (j){
-    case "0":
-          phase=phaseOptions[0];
-       break;
-    case "1":
-      phase=phaseOptions[1];
-    break;
-    case "2":
-        phase=phaseOptions[2];
-      break;
-    case "3":
-      phase=phaseOptions[3];
-     break;
-    case "4":
-       phase=phaseOptions[4];
-    break;
-    items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
-
-}
-  }
-
-console.log (phase);
-  }
 
 
 // runs updatePositions on scroll
