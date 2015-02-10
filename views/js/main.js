@@ -417,7 +417,6 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
-      items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
 
     var phaseOptions=new Array();
   for (var z=0 ; z<5 ;z++){
@@ -446,8 +445,8 @@ function updatePositions() {
 
 }
   }
+      items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
 
-console.log (phase);
   }
 
 
