@@ -444,8 +444,9 @@ phase=0;
     break;
 
 }
-  }
-      items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
+items[i].style.left = items[i].basicLeft + 100 * phase+ 'px';
+  }      
+
 
   }
 
